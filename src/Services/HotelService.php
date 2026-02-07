@@ -13,11 +13,21 @@ class HotelService
 
     public function getAllRooms(): array
     {
-        $allRooms = [];
+        $uniqueRooms = [];
         foreach ($this->providers as $provider) {
-            $allRooms = array_merge($allRooms, $provider->fetchRooms());
+            foreach ($provider->fetchRooms() as $room) {
+                
+                $identifier = $room->name . '-' . $room->room_code;
+
+                
+                if (!isset($uniqueRooms[$identifier]) || $room->total_price < $uniqueRooms[$identifier]->total_price) {
+                    $uniqueRooms[$identifier] = $room;
+                }
+            }
         }
 
+        $allRooms = array_values($uniqueRooms);
+        
         
         usort($allRooms, fn($a, $b) => $a->total_price <=> $b->total_price);
 
