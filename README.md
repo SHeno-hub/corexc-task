@@ -35,12 +35,15 @@ This project is a high-performance technical assessment built with Pure Native P
 
 ## Tech Stack
 
-    | Feature | Technology |
-    | :--- | :--- |
-    | Language | Native PHP 8.2+ (No Framework) |
-    | Dependency Manager | Composer (for PSR-4 Autoloading) |
-    | Transport | Native cURL |
-    | Data Format | JSON |
+| Feature | Technology |
+| :--- | :--- |
+| **Language** | Native PHP 8.2+ (No Framework) |
+| **Dependency Manager** | Composer (for PSR-4 Autoloading) |
+| **Transport** | Native cURL |
+| **Frontend** | HTML5, Bootstrap 5, and jQuery (AJAX integration) |
+| **Data Format** | JSON |
+
+**UI Access**: Available at `http://localhost:8000/index.html`
 
 ## Installation and Setup
 
