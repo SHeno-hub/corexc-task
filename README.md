@@ -1,11 +1,16 @@
 ## Hotel Aggregator Service (Native PHP)
 
 This project is a high-performance technical assessment built with Pure Native PHP. It demonstrates expertise in SOLID principles, design patterns, and efficient data aggregation without the overhead of a framework.
+
 ## Core Requirements Met
 
 * Data Aggregation: Seamlessly consolidates data from 3 different API providers using Native cURL.
 
 * Clean Architecture: Built from scratch with a custom PSR-4 autoloader via Composer.
+
+* Modular UI: Organized frontend structure with separated concerns (Separation of HTML, CSS, and JS) for better maintainability.
+
+* Advanced Frontend: Interactive dashboard with real-time live search, price range filtering, and multi-currency conversion (USD/EGP)
 
 * Data Consistency: Normalizes varied JSON structures (e.g., total vs totalPrice) into a unified DTO (Data  Transfer Object) format.
 
@@ -14,8 +19,6 @@ This project is a high-performance technical assessment built with Pure Native P
 * Performance: Optimized sorting and merging logic to handle multiple data streams efficiently.
 
 * Reliability: Implements graceful error handling; if one API fails, the service continues to provide results from the others.
-
-* Advanced Frontend: Interactive dashboard with real-time live search, price range filtering, and multi-currency conversion (USD/EGP)
 
 ## Architectural Decisions (SOLID & OOP)
 
@@ -28,6 +31,12 @@ This project is a high-performance technical assessment built with Pure Native P
 * Price Normalization: Since providers send different keys, the system dynamically normalizes these into a single total_price field in the DTO for consistency.
 
 * Decoupled Architecture: Separation of concerns between the Backend API and the Frontend UI via JSON contracts
+
+## Project Structure (Frontend)
+To ensure professional code organization, the frontend is decoupled into:
+* index.html: Main structure and layout.
+* css/style.css: Custom UI styling and responsiveness.
+* js/app.js: Reactive logic, API fetching, and filtering.
 
 ## Assumptions & Considerations
 
