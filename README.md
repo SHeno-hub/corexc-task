@@ -34,11 +34,13 @@ This project is a high-performance technical assessment built with Pure Native P
     * Validation: Each DTO is strictly typed to ensure no malformed data reaches the final output.
 
 ## Tech Stack
-* Feature	Technology
-        Language	Native PHP 8.2+ (No Framework)
-        Dependency Manager	Composer (for PSR-4 Autoloading)
-        Transport	Native cURL
-        Data Format	JSON
+
+    | Feature | Technology |
+    | :--- | :--- |
+    | Language | Native PHP 8.2+ (No Framework) |
+    | Dependency Manager | Composer (for PSR-4 Autoloading) |
+    | Transport | Native cURL |
+    | Data Format | JSON |
 
 ## Installation and Setup
 
@@ -62,15 +64,15 @@ This project is a high-performance technical assessment built with Pure Native P
    ``` JSON
     [
         {
+            "name": "Hotel C",
+            "room_code": "SNG-RM",
+            "total_price": 92,
+            "source": "Advertiser 3"
+        },
+        {
             "name": "Hotel B",
             "room_code": "HF-BOD",
             "total_price": 103,
             "source": "Advertiser 2"
-        },
-        {
-            "name": "Hotel C",
-            "room_code": "SNG-RM",
-            "total_price": 108,
-            "source": "Advertiser 1"
         }
     ]```
