@@ -1,0 +1,17 @@
+{
+    "name": "shenouda/corexc-task",
+    "description": "Hotel Room Aggregator Service for Corexc Challenge",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+    "psr-4": {
+        "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "shenooo",
+            "email": "shenouda.nageh1@gmail.com"
+        }
+    ]
+}
