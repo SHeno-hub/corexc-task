@@ -33,4 +33,10 @@ class HotelService
 
         return $allRooms;
     }
+
+    public function sortRoomsByPrice(array $rooms): array 
+    {
+        usort($rooms, fn($a, $b) => $a->total_price <=> $b->total_price);
+        return $rooms;
+    }
 }

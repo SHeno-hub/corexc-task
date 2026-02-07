@@ -52,6 +52,7 @@ To ensure professional code organization, the frontend is decoupled into:
 | :--- | :--- |
 |**Language** | Native PHP 8.3 |
 |**Dependency Manager** | Composer (for PSR-4 Autoloading) |
+|**Testing** | PHPUnit 12.5 |
 |**Transport** | Native cURL |
 |**Frontend** | HTML5, Bootstrap 5, and jQuery (AJAX integration) |
 |**Data Format** | JSON |
@@ -73,9 +74,20 @@ To ensure professional code organization, the frontend is decoupled into:
     API Endpoint: http://localhost:8000/api.php
     Web Interface: http://localhost:8000/index.html
 
+4. Verify Installation:
+    Run the automated test suite to ensure everything is configured correctly:
+    ```php vendor/phpunit/phpunit/phpunit tests```
+
+
 ## Testing & Verification
 
-    Manual Testing: The endpoint has been verified using Postman and Browser testing to ensure JSON integrity and sorting accuracy.
+* Automated Testing: Integrated PHPUnit 12.5 to verify business logic and data integrity.
+* **Unit Tests**:
+* **HotelRoomTest**: Ensures the DTO correctly maps and stores varied API data
+* **HotelServiceTest**: Validates the sorting algorithm and ensures the lowest price is always prioritized
+* **Running Tests**:
+   ```php vendor/phpunit/phpunit/phpunit tests```
+* Manual Verification: Verified via Postman and Browser to ensure JSON schema consistency and UI responsiveness
 
 ## API Response Format
    ``` JSON

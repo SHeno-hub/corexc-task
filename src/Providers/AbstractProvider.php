@@ -16,7 +16,7 @@ abstract class AbstractProvider
         curl_close($ch);
 
         if ($httpCode !== 200 || !$response) {
-            return []; // لو الـ API وقع بنرجع فاضي عشان الـ Reliability
+            return []; 
         }
 
         return json_decode($response, true) ?: [];
