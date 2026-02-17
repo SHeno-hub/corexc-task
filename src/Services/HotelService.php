@@ -25,13 +25,8 @@ class HotelService
                 }
             }
         }
-
         $allRooms = array_values($uniqueRooms);
-        
-        
-        usort($allRooms, fn($a, $b) => $a->total_price <=> $b->total_price);
-
-        return $allRooms;
+        return $this->sortRoomsByPrice($allRooms);
     }
 
     public function sortRoomsByPrice(array $rooms): array 
